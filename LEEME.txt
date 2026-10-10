@@ -1,0 +1,24 @@
+
+CRÉDITO CLARO — PROTOTIPO ACADÉMICO
+
+1. INSTRUCCIONES DE APERTURA
+Abrir index.html con doble clic desde la carpeta del proyecto.
+No se necesita servidor, conexión a internet ni instalar programas.
+Mantener todos los archivos HTML y estilos.css en la misma carpeta.
+
+2. RECORRIDO PRINCIPAL
+Paso 1: Abrir Panorama para consultar los indicadores calculados de una muestra de 20 créditos.
+Paso 2: Seleccionar Créditos por estado para consultar los seis registros de California (CA) y abrir la ficha del crédito 1069243.
+Paso 3: Revisar la ficha histórica del crédito 1069243, continuar a Seguimiento y regresar al panorama inicial.
+
+3. DATOS Y SIMULACIONES
+Los datos originales provienen del Financial Loan Dataset de Aryan Singh.
+Los conteos, porcentajes y sumas son indicadores calculados a partir de la muestra.
+La propuesta de seguimiento, el apoyo futuro de IA y el ejemplo de búsqueda sin resultados son simulados.
+No existe un modelo de IA entrenado, no se guardan cambios y no se realizan operaciones crediticias reales.
+
+4. LIMITACIONES
+El prototipo utiliza únicamente HTML y CSS.
+La ficha de detalle disponible corresponde al crédito 1069243.
+Los demás créditos se muestran para comparación y no tienen una ficha individual implementada.
+La información es histórica y no representa la situación actual de los créditos.

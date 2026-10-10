@@ -1,0 +1,124 @@
+
+PROMPT REVISADO — CRÉDITO CLARO
+
+1. OBJETIVO
+Desarrollar Crédito Claro, un prototipo académico de interfaz web para consultar registros históricos de créditos. El producto debe permitir visualizar indicadores, explorar una muestra de créditos, consultar un expediente individual y representar una propuesta de seguimiento humano.
+
+2. USUARIO
+El usuario principal es un analista de seguimiento de una institución crediticia y el usuario secundario es un supervisor. Ambos perfiles son supuestos definidos por el equipo. La interfaz debe facilitar la consulta de información relevante, reducir la carga de lectura y mostrar claramente el origen de los datos.
+
+3. DATOS
+Utilizar el Financial Loan Dataset de Aryan Singh, tomando exactamente los primeros 20 registros disponibles en muestra.csv.
+
+Respetar los campos originales del archivo y no inventar información.
+
+Campos utilizados:
+id, address_state, loan_status, grade, purpose,
+loan_amount, total_payment, installment, annual_income,
+dti, int_rate, term, verification_status,
+last_payment_date y next_payment_date.
+
+Indicadores calculados exclusivamente con los 20 registros:
+- Total de créditos: 20.
+- Créditos Fully Paid: 15.
+- Créditos Charged Off: 5.
+- Suma de loan_amount: 143775.
+- Créditos del estado CA: 6.
+- Porcentaje Fully Paid: (15 / 20) × 100 = 75 %.
+- Porcentaje Charged Off: (5 / 20) × 100 = 25 %.
+
+El crédito seleccionado para la ficha será el ID 1069243,
+perteneciente al estado CA y con estado Charged Off.
+
+Mostrar los importes sin símbolo monetario porque no se
+ha confirmado la moneda en la documentación utilizada.
+
+Interpretar los valores de fechas almacenados como números
+de serie de Excel únicamente para su presentación en
+formato día/mes/año.
+
+Distinguir visualmente y mediante texto:
+Dato: valor obtenido del dataset.
+Calculado: indicador derivado de los registros.
+Simulado: ejemplo ilustrativo sin procesamiento real.
+
+4. PANTALLAS
+Desarrollar cuatro páginas HTML:
+
+index.html:
+Panorama con cuatro indicadores y una gráfica de distribución
+de los estados Fully Paid y Charged Off.
+
+filtro.html:
+Tabla con los seis créditos del estado CA incluidos en la
+muestra, indicador de filtro activo y ejemplo simulado
+de búsqueda sin resultados. Permitir abrir la ficha del
+crédito 1069243.
+
+detalle.html:
+Ficha histórica fija del crédito 1069243, con información
+original del dataset, fechas presentadas en formato legible
+y una opción para continuar al seguimiento.
+
+seguimiento.html:
+Pantalla de confirmación simulada asociada al crédito
+1069243. Presentar una propuesta de revisión humana
+y describir una posible función futura de IA sin implementar
+un modelo de aprendizaje automático.
+
+5. INTERACCIONES
+Utilizar enlaces relativos para navegar entre las cuatro
+páginas y regresar al panorama.
+
+Mantener los mismos nombres y orden del menú de navegación
+en todas las pantallas, señalando la opción activa.
+
+Utilizar el elemento HTML details para presentar un ejemplo
+de búsqueda sin resultados.
+
+El prototipo no debe almacenar cambios, ejecutar búsquedas
+reales ni modificar los datos originales.
+
+6. TECNOLOGÍAS PERMITIDAS
+Utilizar únicamente HTML5 y CSS3 locales.
+
+El proyecto debe abrirse directamente mediante index.html,
+sin servidor ni conexión a internet.
+
+Organizar los archivos dentro de una misma carpeta y
+utilizar estilos.css como hoja de estilos compartida.
+
+7. RESTRICCIONES
+No utilizar JavaScript, backend, APIs, bases de datos,
+frameworks, librerías externas ni modelos entrenados.
+
+No presentar simulaciones como resultados reales.
+
+No afirmar que los 20 registros representan la distribución
+de toda la cartera crediticia.
+
+No inventar unidades monetarias ni conclusiones sobre
+la situación actual de los créditos.
+
+La función de IA debe presentarse únicamente como una
+propuesta futura de apoyo al analista, sin realizar
+decisiones automáticas de cobranza o aprobación.
+
+8. CRITERIOS DE ACEPTACIÓN
+- Cuatro páginas HTML navegables.
+- Un solo h1 por página.
+- Uso de header, nav, main, section y footer.
+- Menú consistente y opción activa con aria-current.
+- Rótulos textuales Dato, Calculado y Simulado.
+- Tabla con encabezados y datos reales.
+- Filtro activo claramente identificado.
+- Estado alternativo de búsqueda sin resultados.
+- Navegación mediante Tab y Shift + Tab.
+- Foco de teclado visible.
+- Diseño responsive a 375 px sin desbordamiento horizontal.
+- Contraste de texto conforme a WCAG AA, comprobado con
+  una herramienta de evaluación.
+- HTML sin errores al validarse en W3C.
+- Enlaces locales funcionales.
+- Indicadores y unidades correctamente documentados.
+- Distinción explícita entre prototipo y sistema real.

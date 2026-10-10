@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Exploración de créditos históricos">
+    <title>Créditos por estado | Crédito Claro</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <!-- Accesibilidad -->
+    <a class="skip" href="#contenido">
+        Saltar al contenido principal
+    </a>
+
+    <!-- Encabezado -->
+    <header class="top">
+        <div class="shell">
+            <a class="brand" href="index.html">
+                ◈ Crédito Claro
+            </a>
+
+            <small>
+                Prototipo académico · Sin datos en tiempo real
+            </small>
+        </div>
+    </header>
+
+    <!-- Navegación -->
+    <nav class="nav" aria-label="Navegación principal">
+        <div class="shell">
+
+            <a href="index.html">
+                Panorama
+            </a>
+
+            <a href="filtro.html"
+               class="active"
+               aria-current="page">
+                Créditos por estado
+            </a>
+
+            <a href="detalle.html">
+                Ficha del crédito
+            </a>
+
+            <a href="seguimiento.html">
+                Seguimiento
+            </a>
+
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main id="contenido" class="shell">
+
+        <p class="eyebrow">
+            Pantalla 2 de 4 · Filtro activo
+        </p>
+
+        <h1>Créditos por estado</h1>
+
+        <p class="intro">
+            En esta sección se muestran los créditos
+            de California incluidos en la muestra.
+            El analista puede comparar sus montos y
+            estados de pago, y consultar el expediente
+            del crédito seleccionado para la demostración.
+        </p>
+
+        <!-- Filtro activo -->
+        <div class="notice">
+            <strong>Filtro activo:</strong>
+            California (CA) <span class="tag">Dato</span>
+
+            <p>
+                Se encontraron
+                <strong>6</strong>
+                <span class="tag calc">Calculado</span>
+                créditos de este estado dentro de la
+                muestra de 20 registros.
+            </p>
+        </div>
+
+        <!-- Tabla -->
+        <section class="panel"
+                 aria-labelledby="titulo-tabla">
+
+            <div class="panel-heading">
+
+                <h2 id="titulo-tabla">
+                    Créditos registrados en CA
+                </h2>
+
+                <a class="action secondary"
+                   href="index.html">
+                    Volver al panorama
+                </a>
+
+            </div>
+
+            <div class="scroll">
+
+                <table class="data">
+
+                    <caption class="hint">
+                        Créditos de California en la muestra
+                        histórica. Los montos se presentan sin
+                        símbolo de moneda porque la unidad
+                        monetaria no está confirmada.
+                    </caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">
+                                ID del crédito
+                                <span class="tag">Dato</span>
+                            </th>
+
+                            <th scope="col">
+                                Estado
+                                <span class="tag">Dato</span>
+                            </th>
+
+                            <th scope="col">
+                                Situación
+                                <span class="tag">Dato</span>
+                            </th>
+
+                            <th scope="col">
+                                Monto
+                                <span class="tag">Dato</span>
+                            </th>
+
+                            <th scope="col">
+                                Acción disponible
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>1072053</td>
+                            <td>CA</td>
+                            <td>Fully Paid</td>
+                            <td>3,000.00</td>
+                            <td>Consulta de muestra</td>
+                        </tr>
+
+                        <tr>
+                            <td>1069243</td>
+                            <td>CA</td>
+                            <td>Charged Off</td>
+                            <td>12,000.00</td>
+                            <td>
+                                <a href="detalle.html">
+                                    Consultar crédito 1069243
+                                </a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>1062608</td>
+                            <td>CA</td>
+                            <td>Fully Paid</td>
+                            <td>8,000.00</td>
+                            <td>Consulta de muestra</td>
+                        </tr>
+
+                        <tr>
+                            <td>1062734</td>
+                            <td>CA</td>
+                            <td>Charged Off</td>
+                            <td>11,200.00</td>
+                            <td>Consulta de muestra</td>
+                        </tr>
+
+                        <tr>
+                            <td>1062654</td>
+                            <td>CA</td>
+                            <td>Fully Paid</td>
+                            <td>5,000.00</td>
+                            <td>Consulta de muestra</td>
+                        </tr>
+
+                        <tr>
+                            <td>1020855</td>
+                            <td>CA</td>
+                            <td>Fully Paid</td>
+                            <td>8,000.00</td>
+                            <td>Consulta de muestra</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="hint">
+                La tabla incluye seis registros originales.
+                El crédito 1069243 es el expediente disponible
+                para recorrer el prototipo. Los demás registros
+                se presentan únicamente con fines comparativos.
+            </p>
+
+        </section>
+
+        <!-- Estado alternativo -->
+        <details>
+
+            <summary>
+                Ver ejemplo de búsqueda sin resultados
+            </summary>
+
+            <div class="empty">
+
+                <h2>Sin resultados disponibles</h2>
+
+                <p>
+                    No se encontraron registros para el
+                    estado ficticio ZZ.
+                </p>
+
+                <p>
+                    Esta situación es una demostración visual,
+                    no el resultado de una consulta real.
+                    <span class="tag sim">Simulado</span>
+                </p>
+
+                <a href="filtro.html"
+                   class="action secondary">
+                    Volver al filtro de CA
+                </a>
+
+            </div>
+
+        </details>
+
+        <!-- Siguiente paso -->
+        <section class="panel"
+                 aria-labelledby="titulo-siguiente">
+
+            <h2 id="titulo-siguiente">
+                Continuar con la revisión
+            </h2>
+
+            <p>
+                El siguiente paso es consultar el expediente
+                histórico del crédito 1069243 y revisar los
+                datos registrados antes de preparar una
+                propuesta de seguimiento.
+            </p>
+
+            <a href="detalle.html" class="action">
+                Consultar ficha del crédito 1069243 →
+            </a>
+
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="shell">
+
+            <p>
+                Crédito Claro | Prototipo académico
+            </p>
+
+            <p>
+                Fuente: Financial Loan Dataset,
+                Aryan Singh.
+                Muestra exploratoria de 20 registros.
+                No se realizan pagos ni gestiones reales.
+            </p>
+
+        </div>
+    </footer>
+
+</body>
+</html>

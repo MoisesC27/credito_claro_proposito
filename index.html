@@ -1,0 +1,321 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Crédito Claro, prototipo académico de análisis de créditos históricos">
+    <title>Panorama de créditos | Crédito Claro</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <!-- Enlace de accesibilidad -->
+    <a class="skip" href="#contenido">
+        Saltar al contenido principal
+    </a>
+
+    <!-- Encabezado -->
+    <header class="top">
+        <div class="shell">
+            <a class="brand" href="index.html">
+                ◈ Crédito Claro
+            </a>
+
+            <small>
+                Prototipo académico · Sin datos en tiempo real
+            </small>
+        </div>
+    </header>
+
+    <!-- Menú de navegación -->
+    <nav class="nav" aria-label="Navegación principal">
+        <div class="shell">
+
+            <a href="index.html"
+               class="active"
+               aria-current="page">
+                Panorama
+            </a>
+
+            <a href="filtro.html">
+                Créditos por estado
+            </a>
+
+            <a href="detalle.html">
+                Ficha del crédito
+            </a>
+
+            <a href="seguimiento.html">
+                Seguimiento
+            </a>
+
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main id="contenido" class="shell">
+
+        <!-- Presentación -->
+        <section class="bienvenida"
+                 aria-labelledby="titulo-principal">
+
+            <p class="eyebrow">
+                Pantalla 1 de 4 · Panel general
+            </p>
+
+            <h1 id="titulo-principal">
+                Panorama de créditos
+            </h1>
+
+            <p class="intro">
+                Bienvenido a Crédito Claro, una herramienta
+                diseñada para consultar información histórica
+                de créditos de forma sencilla y organizada.
+                Su propósito es ayudar al analista a identificar
+                registros que podrían necesitar una revisión
+                más detallada.
+            </p>
+
+            <div class="notice">
+                <strong>Datos disponibles:</strong>
+                muestra exploratoria de 20 créditos.
+                <span class="tag calc">Calculado</span>
+
+                <p>
+                    Los resultados corresponden únicamente
+                    a esta muestra y no representan toda
+                    la cartera crediticia.
+                    La plataforma no contiene información
+                    en tiempo real.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- Indicadores principales -->
+        <section aria-labelledby="titulo-indicadores">
+
+            <h2 id="titulo-indicadores">
+                Indicadores principales
+            </h2>
+
+            <p>
+                Resumen descriptivo calculado a partir
+                de los 20 registros seleccionados
+                del Financial Loan Dataset.
+            </p>
+
+            <div class="tarjetas">
+
+                <!-- Total de créditos -->
+                <article class="tarjeta">
+
+                    <h3>Créditos analizados</h3>
+
+                    <p class="numero">20</p>
+
+                    <span class="etiqueta">Calculado</span>
+
+                    <p>
+                        Cantidad total de registros
+                        de la muestra.
+                    </p>
+
+                </article>
+
+                <!-- Créditos pagados -->
+                <article class="tarjeta">
+
+                    <h3>Créditos Fully Paid</h3>
+
+                    <p class="numero">15</p>
+
+                    <span class="etiqueta">Calculado</span>
+
+                    <p>
+                        Registros cuyo estado histórico
+                        aparece como Fully Paid.
+                    </p>
+
+                </article>
+
+                <!-- Créditos Charged Off -->
+                <article class="tarjeta">
+
+                    <h3>Créditos Charged Off</h3>
+
+                    <p class="numero">5</p>
+
+                    <span class="etiqueta">Calculado</span>
+
+                    <p>
+                        Registros clasificados como
+                        Charged Off dentro de la muestra.
+                    </p>
+
+                </article>
+
+                <!-- Monto total -->
+                <article class="tarjeta">
+
+                    <h3>Suma de montos de crédito</h3>
+
+                    <p class="numero">143,775</p>
+
+                    <span class="etiqueta">Calculado</span>
+
+                    <p>
+                        Suma de la columna loan_amount
+                        de los 20 registros.
+                        Unidad monetaria no determinable.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- Gráfica de distribución -->
+        <section class="panel"
+                 aria-labelledby="titulo-distribucion">
+
+            <h2 id="titulo-distribucion">
+                Distribución de estados de crédito
+            </h2>
+
+            <p>
+                La siguiente gráfica compara las dos
+                categorías de estado de pago encontradas
+                en la muestra.
+                Unidad: número de créditos.
+            </p>
+
+            <div class="grafica">
+
+                <!-- Fully Paid -->
+                <p>
+                    <strong>Fully Paid</strong>
+                </p>
+
+                <div class="barra"
+                     role="img"
+                     aria-label="15 de 20 créditos Fully Paid, equivalente al 75 por ciento calculado">
+                    <div class="progreso pagados"></div>
+                </div>
+
+                <p>
+                    15 de 20 créditos
+                    <span class="tag calc">Calculado</span>
+                </p>
+
+                <!-- Charged Off -->
+                <p>
+                    <strong>Charged Off</strong>
+                </p>
+
+                <div class="barra"
+                     role="img"
+                     aria-label="5 de 20 créditos Charged Off, equivalente al 25 por ciento calculado">
+                    <div class="progreso observacion"></div>
+                </div>
+
+                <p>
+                    5 de 20 créditos
+                    <span class="tag calc">Calculado</span>
+                </p>
+
+            </div>
+
+            <p class="nota">
+                <strong>Fórmula:</strong>
+                (créditos de cada categoría /
+                total de créditos) × 100.
+            </p>
+            
+            <p class="nota">
+                        Fully Paid: 75 %.
+                        Charged Off: 25 %.
+                        <span class="tag calc">Calculado</span>
+                    </p>
+
+
+        </section>
+
+        <!-- Interpretación de resultados -->
+        <section class="panel"
+                 aria-labelledby="titulo-interpretacion">
+
+            <h2 id="titulo-interpretacion">
+                ¿Qué nos dicen estos resultados?
+            </h2>
+
+            <p>
+                En esta muestra, la mayoría de los registros
+                tiene el estado histórico Fully Paid.
+                Sin embargo, también existen créditos
+                clasificados como Charged Off.
+            </p>
+
+            <p>
+                Esta información permite comparar categorías
+                y explorar expedientes individuales.
+                No se debe utilizar para afirmar que la
+                cartera completa tiene la misma distribución
+                o para predecir incumplimientos futuros.
+            </p>
+
+        </section>
+
+        <!-- Siguiente acción -->
+        <section class="panel"
+                 aria-labelledby="titulo-explorar">
+
+            <h2 id="titulo-explorar">
+                Explorar créditos por estado
+            </h2>
+
+            <p>
+                El siguiente paso es consultar los créditos
+                de California incluidos en la muestra.
+                Desde esa pantalla podrás comparar registros
+                y abrir la ficha histórica del crédito
+                1069243.
+            </p>
+
+            <a href="filtro.html" class="action">
+                Consultar créditos por estado →
+            </a>
+
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="shell">
+
+            <p>
+                Crédito Claro | Prototipo académico
+            </p>
+
+            <p>
+                Fuente: Financial Loan Dataset,
+                Aryan Singh.
+            </p>
+
+            <p>
+                Información histórica.
+                No representa datos en tiempo real
+                ni realiza gestiones crediticias reales.
+            </p>
+
+        </div>
+    </footer>
+
+</body>
+</html>

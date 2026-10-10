@@ -1,0 +1,724 @@
+
+/* Estilos generales de Crédito Claro */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #243447;
+    line-height: 1.6;
+}
+
+.contenedor {
+    width: 92%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+/* Accesibilidad */
+
+.saltar {
+    position: absolute;
+    left: -9999px;
+}
+
+.saltar:focus {
+    left: 10px;
+    top: 10px;
+    background: white;
+    padding: 10px;
+    z-index: 100;
+}
+
+a:focus-visible {
+    outline: 3px solid #cc6900;
+    outline-offset: 3px;
+}
+
+/* Encabezado */
+
+.encabezado {
+    background-color: #14283a;
+    color: white;
+    padding: 25px 0;
+}
+
+.logo {
+    color: white;
+    margin: 0;
+    font-size: 28px;
+}
+
+.encabezado p {
+    margin: 5px 0 0;
+    color: #e1eaf2;
+}
+
+/* Navegación */
+
+.menu {
+    background-color: white;
+    border-bottom: 1px solid #d8e0e8;
+}
+
+.menu .contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 12px 0;
+}
+
+.menu a {
+    color: #14283a;
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    background-color: #e4edf5;
+}
+
+.menu .activo {
+    background-color: #104f79;
+    color: white;
+}
+
+/* Bienvenida */
+
+.bienvenida {
+    padding: 35px 0 25px;
+}
+
+.subtitulo {
+    color: #104f79;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 34px;
+    margin: 10px 0;
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+h3 {
+    font-size: 17px;
+    margin-top: 0;
+}
+
+.aviso {
+    background-color: #e4edf5;
+    padding: 15px;
+    border-left: 4px solid #104f79;
+    border-radius: 5px;
+}
+
+/* Tarjetas de indicadores */
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin: 20px 0 30px;
+}
+
+.tarjeta {
+    min-width: 0;
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #d8e0e8;
+    box-shadow: 0 4px 12px #14283a12;
+}
+
+.numero {
+    font-size: 32px;
+    font-weight: bold;
+    color: #104f79;
+    margin: 10px 0;
+    overflow-wrap: anywhere;
+}
+
+.etiqueta {
+    display: inline-block;
+    background-color: #e4edf5;
+    color: #14283a;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Paneles de contenido */
+
+.panel {
+    background-color: white;
+    padding: 25px;
+    border: 1px solid #d8e0e8;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+/* Barras de la gráfica */
+
+.grafica {
+    margin: 25px 0;
+}
+
+.barra {
+    width: 100%;
+    height: 18px;
+    background-color: #e1e8ef;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progreso {
+    height: 100%;
+    background-color: #104f79;
+    border-radius: 10px;
+}
+
+.pagados {
+    width: 75%;
+}
+
+.observacion {
+    width: 25%;
+}
+
+.nota {
+    font-size: 14px;
+    color: #475569;
+}
+
+/* Botones */
+
+.boton {
+    display: inline-block;
+    max-width: 100%;
+    background-color: #104f79;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.boton:hover {
+    background-color: #14283a;
+}
+
+/* Pie de página */
+
+.pie {
+    background-color: #14283a;
+    color: white;
+    padding: 25px 0;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Diseño para teléfonos */
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 27px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta,
+    .panel {
+        padding: 18px;
+    }
+
+    .numero {
+        font-size: 28px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+}
+
+/* ESTILOS PARA LAS OTRAS TRES PANTALLAS */
+
+/* Contenedor general */
+.shell {
+    width: 92%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+main.shell {
+    padding-top: 35px;
+    padding-bottom: 50px;
+}
+
+/* Encabezado */
+.top {
+    background-color: #14283a;
+    color: white;
+}
+
+.top .shell {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.brand {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.top small {
+    color: #e1eaf2;
+}
+
+/* Menú de navegación */
+.nav {
+    background-color: white;
+    border-bottom: 1px solid #d8e0e8;
+}
+
+.nav .shell {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.nav a {
+    color: #14283a;
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    background-color: #e4edf5;
+}
+
+.nav a.active {
+    background-color: #104f79;
+    color: white;
+}
+
+/* Accesibilidad */
+.skip {
+    position: absolute;
+    left: -9999px;
+}
+
+.skip:focus {
+    left: 10px;
+    top: 10px;
+    background-color: white;
+    padding: 10px;
+    z-index: 100;
+}
+
+a:focus-visible,
+summary:focus-visible {
+    outline: 3px solid #cc6900;
+    outline-offset: 3px;
+}
+
+/* Títulos y textos */
+.eyebrow {
+    color: #104f79;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.intro {
+    max-width: 750px;
+    color: #475569;
+    margin-bottom: 25px;
+}
+
+.crumb,
+.hint {
+    color: #475569;
+    font-size: 14px;
+}
+
+/* Avisos de la pantalla */
+.notice {
+    background-color: #e4edf5;
+    border-left: 4px solid #104f79;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.caution {
+    background-color: #fff6ed;
+    border-left-color: #ad621e;
+}
+
+/* Etiquetas de origen */
+.tag {
+    display: inline-block;
+    background-color: #edf1f5;
+    color: #344a5f;
+    padding: 4px 9px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.tag.calc {
+    background-color: #e4edf5;
+    color: #14283a;
+}
+
+.tag.sim {
+    background-color: #fff2e6;
+    color: #743a11;
+    border: 1px dashed #ad621e;
+}
+
+/* Encabezado de los paneles */
+.panel-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Tabla de créditos */
+.scroll {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.data {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 15px;
+}
+
+.data th {
+    background-color: #e4edf5;
+    color: #14283a;
+    font-weight: bold;
+}
+
+.data th,
+.data td {
+    padding: 13px 10px;
+    border-bottom: 1px solid #d8e0e8;
+}
+
+.data tbody tr:hover {
+    background-color: #f4f7fb;
+}
+
+.data td a {
+    color: #104f79;
+    font-weight: bold;
+}
+
+/* Botones y enlaces principales */
+.action {
+    display: inline-block;
+    max-width: 100%;
+    background-color: #104f79;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.action:hover {
+    background-color: #14283a;
+}
+
+.action.secondary {
+    color: #104f79;
+    background-color: #e4edf5;
+}
+
+/* Información de la ficha */
+.facts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.fact {
+    min-width: 0;
+    padding: 15px;
+    border: 1px solid #d8e0e8;
+    border-radius: 8px;
+}
+
+.fact small {
+    color: #475569;
+}
+
+.fact strong {
+    display: block;
+    margin-top: 8px;
+    overflow-wrap: anywhere;
+}
+
+/* Pantalla de seguimiento */
+.grid2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.steps li {
+    padding: 8px 0;
+}
+
+/* Mensaje sin resultados */
+details {
+    background-color: white;
+    border: 1px solid #d8e0e8;
+    padding: 16px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.empty {
+    padding: 25px;
+    text-align: center;
+    border: 1px dashed #8399a9;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+/* Pie de página */
+.footer {
+    background-color: #14283a;
+    color: white;
+    padding: 25px 0;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 600px) {
+
+    .facts,
+    .grid2 {
+        grid-template-columns: 1fr;
+    }
+
+    .top .shell {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav a {
+        font-size: 14px;
+    }
+
+    .data {
+        font-size: 13px;
+    }
+
+    .data th,
+    .data td {
+        padding: 9px 6px;
+    }
+}
+
+@media (max-width: 600px) {
+    .data {
+        font-size: 12px;
+        table-layout: fixed;
+    }
+
+    .data th,
+    .data td {
+        padding: 6px 3px;
+        overflow-wrap: anywhere;
+    }
+
+    .data td a {
+        overflow-wrap: anywhere;
+    }
+}
+
+/* =========================================
+   MEJORAS FINALES DE CRÉDITO CLARO
+   ========================================= */
+
+/* Evitar que elementos largos desborden la pantalla */
+.shell,
+.contenedor,
+.panel,
+.fact {
+    min-width: 0;
+}
+
+/* Mejorar el encabezado */
+.brand:hover {
+    color: #d8eaf7;
+}
+
+/* Navegación accesible */
+.nav a,
+.menu a {
+    transition: background-color 0.2s ease;
+}
+
+.nav a:focus-visible,
+.menu a:focus-visible,
+.action:focus-visible,
+.boton:focus-visible {
+    outline: 3px solid #cc6900;
+    outline-offset: 3px;
+}
+
+/* Mejorar tarjetas de la ficha */
+.fact {
+    background-color: #fbfcfe;
+    border-radius: 10px;
+    padding: 18px;
+}
+
+.fact small {
+    display: block;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.fact strong {
+    font-size: 19px;
+    color: #14283a;
+}
+
+/* Mejorar separación del contenido */
+.panel {
+    margin-top: 20px;
+}
+
+.intro {
+    line-height: 1.8;
+}
+
+/* Mejorar avisos */
+.notice {
+    line-height: 1.7;
+}
+
+.notice p {
+    margin-bottom: 0;
+}
+
+/* Botones */
+.action,
+.boton {
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* Mejorar enlaces de la tabla */
+.data td a:hover {
+    text-decoration: underline;
+}
+
+/* Mejorar visualización de etiquetas */
+.tag {
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+/* Diseño adaptable */
+@media (max-width: 600px) {
+
+    .shell,
+    .contenedor {
+        width: 94%;
+    }
+
+    .facts,
+    .grid2,
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .fact {
+        padding: 14px;
+    }
+
+    .fact strong {
+        font-size: 17px;
+    }
+
+    .panel {
+        padding: 18px;
+    }
+
+    .action,
+    .boton {
+        max-width: 100%;
+        white-space: normal;
+    }
+
+    .nav .shell,
+    .menu .contenedor {
+        gap: 6px;
+    }
+
+    .nav a,
+    .menu a {
+        font-size: 13px;
+        padding: 9px 10px;
+    }
+
+}
+
+/* Reducir animaciones si el usuario lo solicita */
+@media (prefers-reduced-motion: reduce) {
+    .nav a,
+    .menu a {
+        transition: none;
+    }
+}
